@@ -12,14 +12,19 @@ void push(stack_t **stack, int line_number, char *args)
 	int value;
 
 	/* Check if there is an argument after push */
-	if (!args || (!isdigit(args[0]) && args[0] != '-' && args[0] != '+'))
+	if (args == NULL || args[0] == '\0' || (!isdigit(args[0]) &&
+				args[0] != '-' && args[0] != '+'))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
 	/* Convert the argument to an integer */
-	value = atoi(args);
+	if (!sscanf(args, "%d", &value))
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
 	/* Create a new node for the stack */
 	new_node = malloc(sizeof(stack_t));
