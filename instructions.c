@@ -12,11 +12,8 @@ void handle_instruction(char *instruction, stack_t **stack,
 {
 	char *opcode;
 
-	if (!instruction || !stack)
-	{
-		fprintf(stderr, "Error: Null pointer detected\n");
-		exit(EXIT_FAILURE);
-	}
+	if (instruction[0] == '#')
+		return;
 
 	opcode = strtok(instruction, " \t\n");
 
