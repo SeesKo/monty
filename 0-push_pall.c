@@ -34,7 +34,7 @@ void push(stack_t **stack, unsigned int line_number)
 	int value;
 	stack_t *new_node;
 
-	if (!arg || !is_number(arg))
+	if (!arg || !is_number(arg) || strtok(NULL, " \t\n") != NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
