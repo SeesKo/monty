@@ -71,7 +71,6 @@ void pall(stack_t *stack, unsigned int line_number)
 
 	if (!stack)
 	{
-		fprintf(stderr, "L%d: stack is empty\n", line_number);
 		return;
 	}
 
