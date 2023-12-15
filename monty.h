@@ -45,16 +45,15 @@ typedef struct instruction_s
 
 
 /* USER-DEFINED PROTOTYPES */
+int is_number(const char *str);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t *stack, unsigned int line_number);
-void handle_instruction(char *instruction, stack_t **stack,
-		unsigned int line_number);
-int is_number(const char *str);
 void pint(stack_t *stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
-
+void handle_instruction(char *instruction, stack_t **stack,
+		unsigned int line_number);
 
 #endif /* MONTY_H */
