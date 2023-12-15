@@ -34,7 +34,7 @@ void push(stack_t **stack, unsigned int line_number)
 	int value;
 	stack_t *new_node;
 
-	if (!arg || !is_number(arg) || strtok(NULL, " \t\n") != NULL)
+	if (!arg || !is_number(arg))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
@@ -68,6 +68,12 @@ void push(stack_t **stack, unsigned int line_number)
 void pall(stack_t *stack, unsigned int line_number)
 {
 	(void)line_number;
+
+	if (!stack)
+	{
+		fprintf(stderr, "L%d: stack is empty\n", line_number);
+		return;
+	}
 
 	while (stack)
 	{
