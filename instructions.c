@@ -42,9 +42,6 @@ void handle_instruction(char *instruction, stack_t **stack,
 		else if (strcmp(opcode, "nop") == 0)
 			nop(stack, line_number);
 		else
-		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
-			exit(EXIT_FAILURE);
-		}
+			handle_more(instruction, stack, line_number);
 	}
 }
