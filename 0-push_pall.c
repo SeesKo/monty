@@ -2,7 +2,6 @@
 
 /**
  * is_number - Checks if a string represents a valid integer.
- *
  * @str: The input string to be checked.
  *
  * Return: 1 if the string is a valid integer, 0 otherwise.
@@ -24,7 +23,6 @@ int is_number(const char *str)
 
 /**
  * push - Pushes an integer onto the stack.
- *
  * @stack: Pointer to the stack.
  * @line_number: Line number of the "push" instruction in the bytecode file.
  */
@@ -61,7 +59,6 @@ void push(stack_t **stack, unsigned int line_number)
 
 /**
  * pall - Prints all the integers in the stack.
- *
  * @stack: Pointer to the stack.
  * @line_number: Line number of the "pall" instruction in the bytecode file.
  */
