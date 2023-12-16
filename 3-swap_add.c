@@ -51,11 +51,6 @@ void add(stack_t **stack, unsigned int line_number)
  * @stack: Pointer to the stack.
  * @line_number: Line number of the "nop" instruction
  * in the bytecode file.
- *
- * Description:
- * The " nop" function does nothing. It is used to implement the "nop" opcode,
- * which is an instruction that doesn't perform any meaningful operation.
- * The parameters are intentionally unused.
  */
 void nop(stack_t **stack, unsigned int line_number)
 {
