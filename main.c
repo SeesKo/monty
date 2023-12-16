@@ -1,5 +1,8 @@
 #include "monty.h"
 
+/* Global Variable */
+int mode;
+
 /**
  * main - Entry point for the Monty interpreter.
  *
