@@ -4,6 +4,9 @@
 /* MACROS */
 #define _POSIX_C_SOURCE 200809L
 
+#define STACK 0
+#define QUEUE 1
+
 
 /* STANDARD LIBRARY HEADERS */
 #include <stdio.h>
@@ -44,6 +47,9 @@ typedef struct instruction_s
 } instruction_t;
 
 
+/* GLOBAL VARIABLE */
+extern int mode;
+
 /* USER-DEFINED PROTOTYPES */
 int is_number(const char *str);
 void push(stack_t **stack, unsigned int line_number);
@@ -57,6 +63,14 @@ void sub(stack_t **stack, unsigned int line_number);
 void _div(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
+void op_stack(stack_t **stack, unsigned int line_number);
+void op_queue(stack_t **stack, unsigned int line_number);
+void handle_more(char *instruction, stack_t **stack,
+		unsigned int line_number);
 void handle_instruction(char *instruction, stack_t **stack,
 		unsigned int line_number);
 
