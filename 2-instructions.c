@@ -22,6 +22,10 @@ void handle_more(char *instruction, stack_t **stack,
 			rotl(stack, line_number);
 		else if (strcmp(opcode, "rotr") == 0)
 			rotr(stack, line_number);
+		else if (strcmp(opcode, "stack") == 0)
+			op_stack(stack, line_number);
+		else if (strcmp(opcode, "queue") == 0)
+			op_queue(stack, line_number);
 		else
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
