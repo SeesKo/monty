@@ -73,5 +73,6 @@ void handle_more(char *instruction, stack_t **stack,
 		unsigned int line_number);
 void handle_instruction(char *instruction, stack_t **stack,
 		unsigned int line_number);
+void free_stack(stack_t *stack);
 
 #endif /* MONTY_H */
